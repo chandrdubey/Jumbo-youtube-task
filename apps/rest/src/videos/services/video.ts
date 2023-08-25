@@ -1,13 +1,13 @@
 import { BaseValidator, isUUID } from '@libs/boat/validator';
 import { User$Modal$Interface, UserLibService } from '@libs/users';
 import { Inject, Injectable } from '@nestjs/common';
-import { Video$Modal$Interface, VIDEO_REPOSITORY, VideoLibService } from '@libs/videos';
 import { Cron } from '@nestjs/schedule';
 import { CRON_SYNC_YOUTUBE } from '../constant';
 import { YoutubeService } from './youtube';
 import { SearchVideosDto } from '../validators';
 import { VideosGetByIdDto } from '../validators/getById';
 import { VideoRepositoryContract } from '../repositories';
+import { VIDEO_REPOSITORY } from '../constants';
 
 @Injectable()
 export class VideoService {

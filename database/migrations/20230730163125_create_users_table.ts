@@ -7,8 +7,7 @@ export async function up(knex: Knex): Promise<void> {
   return knex.schema.createTable(tableName, function (table) {
     table.bigIncrements('id');
     table.uuid('uuid').index();
-    table.string('first_name');
-    table.string('last_name');
+    table.string('full_name');
     table.string('user_name').unique();
     table.string('email').unique();
     table.string('password');

@@ -3,7 +3,7 @@ import { DatabaseRepository, InjectModel } from '@libs/boat/db';
 import { VideoModel } from '@libs/videos/models';
 import { VideoRepositoryContract } from './contract';
 import { Video$Modal$Interface } from '@libs/videos/interface/video';
-import { UserVideoLinkModel } from '@libs/videos/models/userVideoLink';
+import { UserVideoModel } from '../../models/userVideoLink';
 import { UserModel } from '@libs/users';
 
 @Injectable()
@@ -60,13 +60,13 @@ export class VideoRepository
 
     if (userId) {
       query
-        .join(' user_video_link', function () {
-          this.on('videos.id', 'user_video_link.videoId').onVal(
-            'user_video_link.userId',
+        .join(' user_video', function () {
+          this.on('videos.id', 'user_video.videoId').onVal(
+            'user_video.userId',
             userId,
           );
         })
-        .orderBy('user_video_link.createdAt', 'DESC');
+        .orderBy('user_video.createdAt', 'DESC');
     }
 
     return paginate
@@ -76,11 +76,11 @@ export class VideoRepository
 
   async linkUser(params) {
     const { userId, videoId } = params;
-    const exists = await UserVideoLinkModel.query()
+    const exists = await UserVideoModel.query()
       .where({ userId, videoId })
       .first();
     if (!exists) {
-      let userVideoLinkQuery = await UserVideoLinkModel.query().insert({
+      let userVideoLinkQuery = await UserVideoModel.query().insert({
         userId,
         videoId,
       } as any);
@@ -90,7 +90,7 @@ export class VideoRepository
   }
   async unLinkUser(params) {
     const { userId, videoId } = params;
-    let userVideoLinkQuery = await UserVideoLinkModel.query()
+    let userVideoLinkQuery = await UserVideoModel.query()
       .delete()
       .where({
         userId,

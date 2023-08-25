@@ -1,7 +1,7 @@
 import { Knex } from 'knex';
 import { timestamps } from '../helpers';
 
-const tableName = 'user_video_link';
+const tableName = 'user_video';
 export async function up(knex: Knex): Promise<void> {
   return knex.schema.createTable(tableName, function (table) {
     table.bigIncrements('id');

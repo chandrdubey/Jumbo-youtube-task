@@ -16,10 +16,8 @@ import { AuthApiModule } from '../auth/module';
     AuthApiModule],
   controllers: [VideoController],
   providers: [
-    
     { provide: VIDEO_REPOSITORY, useClass: VideoRepository },
-    
-    VideoService, YoutubeService],
+     YoutubeService, VideoService],
   exports: [VideoService],
 })
 export class VideoModule {}
