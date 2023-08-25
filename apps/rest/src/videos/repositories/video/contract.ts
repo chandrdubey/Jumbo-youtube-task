@@ -1,5 +1,4 @@
 import { RepositoryContract } from '@libs/boat/db';
-import { User$Modal$Interface} from '@libs/users';
 import { Video$Modal$Interface } from '../../interface/video';
 
 export interface VideoRepositoryContract

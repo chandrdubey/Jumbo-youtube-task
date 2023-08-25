@@ -25,7 +25,7 @@
       "@libs/users": ["libs/users/src"],
       "@app/users": ["apps/rest/src/users"],
       "@app/auth": ["apps/rest/src/auth"],
-
+      "@app/videos": ["apps/rest/src/videos"],
       "@libs/users/*": ["libs/users/src/*"],
       "@libs/auth": ["libs/auth/src"],
       "@libs/auth/*": ["libs/auth/src/*"],

@@ -1,10 +1,8 @@
 import { Controller, Delete, Get, Post, Req, Res } from '@nestjs/common';
 import { Request, Response, RestController } from '@libs/boat';
 import { VideoService } from '../services/video';
-import { UserTransformer } from '@libs/users';
 import { AuthGuard } from '@app/auth';
 import { VideoTransformer } from '../transformer';
-import { Console } from 'console';
 @Controller('videos')
 export class VideoController extends RestController {
   constructor(private readonly service: VideoService) {

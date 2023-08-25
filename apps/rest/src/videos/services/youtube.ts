@@ -1,6 +1,6 @@
 const { google } = require('googleapis');
 
-import { Video$Modal$Interface } from '@libs/videos';
+import { Video$Modal$Interface } from '@app/videos';
 import { Injectable } from '@nestjs/common';
 
 const youtubeUrl = "https://www.youtube.com/watch?v=video_id"

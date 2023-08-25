@@ -1,7 +1,6 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { UserModel } from '@libs/users/models';
 import { UserRepositoryContract } from './contract';
-import { User$Modal$Interface} from '@libs/users/interface/user';
+import { User$Modal$Interface, UserModel} from '@app/users';
 import { DatabaseRepository, InjectModel } from '@libs/boat/db';
 
 @Injectable()

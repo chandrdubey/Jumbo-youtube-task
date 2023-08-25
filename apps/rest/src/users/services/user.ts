@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { USER_REPOSITORY } from '../constants';
 import { UserRepositoryContract } from '../repositories';
-import { User$Modal$Interface} from '@libs/users';
+import { User$Modal$Interface} from '@app/users';
 
 @Injectable()
 export class UserService {

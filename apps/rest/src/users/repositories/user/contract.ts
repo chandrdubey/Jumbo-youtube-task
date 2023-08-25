@@ -1,6 +1,5 @@
-import { Pagination } from '@libs/boat';
 import { RepositoryContract } from '@libs/boat/db';
-import { User$Modal$Interface} from '@libs/users';
+import { User$Modal$Interface} from '@app/users';
 
 export interface UserRepositoryContract
   extends RepositoryContract<User$Modal$Interface> {}

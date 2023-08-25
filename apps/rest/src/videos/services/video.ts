@@ -1,5 +1,5 @@
 import { BaseValidator, isUUID } from '@libs/boat/validator';
-import { User$Modal$Interface, UserLibService } from '@libs/users';
+import { User$Modal$Interface } from '@app/users';
 import { Inject, Injectable } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
 import { CRON_SYNC_YOUTUBE } from '../constant';

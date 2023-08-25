@@ -1,5 +1,4 @@
 import { BaseValidator } from '@libs/boat/validator';
-// import { User$Modal$Interface, UserLibService } from '@libs/users';
 import { User$Modal$Interface, UserService } from '../../users';
 
 import { Injectable } from '@nestjs/common';
@@ -7,8 +6,7 @@ import { LoginDto, SignUpDto } from '../validators';
 import * as bcrypt from 'bcrypt';
 import { ConfigService } from '@nestjs/config';
 import { InvalidCredentials } from '@libs/boat';
-import { JwtPayload } from '@libs/auth';
-import { AuthLibService } from '@libs/auth/services/auth';
+import { JwtPayload } from '@app/auth';
 import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
