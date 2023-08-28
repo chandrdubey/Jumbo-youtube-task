@@ -28,11 +28,4 @@ export class AuthController extends RestController {
     });
   }
 
-  // @AuthGuard()
-  // @Get('profile')
-  // async profile(@Req() req: Request, @Res() res: Response) {
-  //   return res.success(
-  //     await this.transform(req.user, new UserTransformer(), { req }),
-  //   );
-  // }
 }
